@@ -23,15 +23,38 @@ function generatePassword() {
 // ^ These are true and false values 
 
 var numberlist = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
-var symbollist = ("!", "_", "+", "@", "#", "~")
+var specialcharacterslist = ("!", "_", "+", "@", "#", "~")
 var lowercaselist = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 var capitalletterslist = []
+
+var optionscart = []
 
 for (var i = 0; i < lowercaselist.length; i++) {
   capitalletterslist[i] = lowercaselist[i].toLocaleUpperCase()
 }
 
+if (userWantsNumbers === true) {
+  optionscart.push(numberlist)
 
+}
+
+if (userWantsSpecialCharacters === true) {
+  optionscart.push(specialCharacters)
+}
+
+if (userWantsLowerCase === true) {
+  optionscart.push(lowercaselist)
+}
+
+if (userWantsCapitalLetters === true) {
+  optionscart.push(capitalletterslist)
+}
+
+var generatedpassword = ""
+
+for (var i = 0; i < PasswordLength; i++) {
+  
+}
   
 }
 
