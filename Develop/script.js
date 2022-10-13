@@ -1,6 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword() {
+  var userinput = window.prompt("Random Password")
+ 
+  
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
