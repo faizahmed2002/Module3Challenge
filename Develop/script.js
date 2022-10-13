@@ -3,7 +3,17 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   var userinput = window.prompt("Random Password")
- 
+  var PasswordLength = parseInt(userinput)
+
+  if(isNaN(PasswordLength)) {
+    window.alert("That is not a number")
+    return
+  } 
+
+  
+  
+  
+
   
 }
 
