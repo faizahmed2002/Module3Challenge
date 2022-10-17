@@ -63,6 +63,9 @@ if (userWantsCapitalLetters === true) {
   optionscart.push(capitalletterslist)
 }
 
+if (optionscart.length === 0) {
+  optionscart.push(numberlist)
+}
 
 var generatedpassword = ""
 
@@ -71,9 +74,9 @@ for (var i = 0; i < PasswordLength; i++) {
   var randomchar = getRandomItem(randomlist)
   generatedpassword += randomchar
   
-}
+ }
 
-
+ return generatedpassword
 }
 
 // Write password to the #password input
