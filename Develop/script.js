@@ -1,6 +1,19 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function randomInt(min, max) {
+  if (!max) {
+    max = min
+    min = 0
+  }
+  var rand = math.random()
+  return Math.floor(min +(1 - rand())*rand )
+}
+
+function getRandomItem(list) {
+  return list[randomInt(list.length)]
+}
+
 function generatePassword() {
   var userinput = window.prompt("How long do you want your password to be?")
   var PasswordLength = parseInt(userinput)
@@ -50,10 +63,13 @@ if (userWantsCapitalLetters === true) {
   optionscart.push(capitalletterslist)
 }
 
+
 var generatedpassword = ""
 
 for (var i = 0; i < PasswordLength; i++) {
-  
+  var randomlist = getRandomItem(optionscart)
+  var randomchar = getRandomItem(randomlist)
+  console.log(randomchar)
 }
   
 }
