@@ -35,13 +35,12 @@ function generatePassword() {
     "Would you like to include symbols in your password?"
   );
   var userWantsLowerCase = window.confirm(
-    "Would you like to include lower case in your password?"
+    "Would you like to include lower case letters in your password?"
   );
   var userWantsCapitalLetters = window.confirm(
     "Would you like to include capital letters in your password?"
   );
 
-  // ^ These are true and false values
 
   var numberlist = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
   var Symbollist = ("!", "_", "+", "@", "#", "~");
