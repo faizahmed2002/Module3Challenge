@@ -6,8 +6,8 @@ function randomInt(min, max) {
     max = min
     min = 0
   }
-  var rand = math.random()
-  return Math.floor(min +(1 - rand())*rand )
+  var random = Math.random()
+  return Math.floor(min*(1 - random) + random*max)
 }
 
 function getRandomItem(list) {
@@ -36,7 +36,7 @@ function generatePassword() {
 // ^ These are true and false values 
 
 var numberlist = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
-var specialcharacterslist = ("!", "_", "+", "@", "#", "~")
+var symbollist = ("!", "_", "+", "@", "#", "~")
 var lowercaselist = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 var capitalletterslist = []
 
@@ -52,7 +52,7 @@ if (userWantsNumbers === true) {
 }
 
 if (userWantsSpecialCharacters === true) {
-  optionscart.push(specialCharacters)
+  optionscart.push(Symbol)
 }
 
 if (userWantsLowerCase === true) {
@@ -69,9 +69,11 @@ var generatedpassword = ""
 for (var i = 0; i < PasswordLength; i++) {
   var randomlist = getRandomItem(optionscart)
   var randomchar = getRandomItem(randomlist)
-  console.log(randomchar)
-}
+  generatedpassword += randomchar
   
+}
+
+
 }
 
 // Write password to the #password input
