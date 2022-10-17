@@ -31,8 +31,8 @@ function generatePassword() {
   var userWantsNumbers = window.confirm(
     "Would you like to include numbers in your password?"
   );
-  var userWantsSpecialCharacters = window.confirm(
-    "Would you like to include special characters in your password?"
+  var userWantsSymbols = window.confirm(
+    "Would you like to include symbols in your password?"
   );
   var userWantsLowerCase = window.confirm(
     "Would you like to include lower case in your password?"
@@ -44,7 +44,7 @@ function generatePassword() {
   // ^ These are true and false values
 
   var numberlist = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
-  var symbollist = ("!", "_", "+", "@", "#", "~");
+  var Symbollist = ("!", "_", "+", "@", "#", "~");
   var lowercaselist =
     ("a",
     "b",
@@ -84,7 +84,7 @@ function generatePassword() {
     optionscart.push(numberlist);
   }
 
-  if (userWantsSpecialCharacters === true) {
+  if (userWantsSymbols === true) {
     optionscart.push(Symbol);
   }
 
